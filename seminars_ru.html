@@ -1,8 +1,9 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Семинары на русском — Храм Христа Спасителя, Нью Йорк</title>
     <style>
       *,
@@ -94,6 +95,50 @@
         margin-top: 6px;
       }
 
+      /* ── collapsible part sections ── */
+      details.part {
+        margin-bottom: 10px;
+      }
+
+      summary.part-title {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        font-size: 1.15em;
+        font-weight: bold;
+        color: #2c3e50;
+        background: #eae5dc;
+        border-left: 4px solid #8b6f47;
+        border-radius: 3px;
+        padding: 10px 16px;
+        margin-bottom: 0;
+        user-select: none;
+        transition: background 0.15s;
+      }
+      summary.part-title::-webkit-details-marker {
+        display: none;
+      }
+      summary.part-title::before {
+        content: "▶";
+        font-size: 0.8em;
+        /*color: #8b6f47;*/
+        color: #3a5374;
+        transition: transform 0.2s;
+        flex-shrink: 0;
+      }
+      details.part[open] > summary.part-title::before {
+        transform: rotate(90deg);
+      }
+      summary.part-title:hover {
+        background: #ddd8ce;
+      }
+
+      .part-body {
+        padding-top: 14px;
+      }
+
       /* ── footer ── */
       footer {
         text-align: center;
@@ -115,794 +160,796 @@
         Семинары на русском языке. Аудио можно прослушать прямо на странице или
         скачать.
       </p>
-      <div class="item">
-        <div class="filename">2020-06-04 Mt 10</div>
-        <div class="audio">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-06-04.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Иисус отвечает фарисеям, искушающим его вопросом о разводе: брак —
-          союз, установленный Богом, который не следует разрывать; Моисей
-          разрешил развод лишь из-за жестокосердия людей. Затем Иисус
-          благословляет детей, подчёркивая их особое место в Царстве Божьем.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2020-10-08 Ин 5</div>
-        <div class="audio">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-10-08.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Иисус исцеляет парализованного у купальни в субботу, что вызывает
-          преследование со стороны иудеев. Этот эпизод раскрывает суть конфликта
-          Иисуса с религиозными властями и его свидетельство о собственной
-          божественной миссии.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2020-10-15 Ин 6. О вечной жизни</div>
-        <div class="audio">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-10-15.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          В Ин. 5–6 Иисус открывает себя как источник воскресения и вечной
-          жизни, а чудо насыщения пяти тысяч предвосхищает евхаристию. Он
-          называет себя хлебом жизни и отвергает попытки сделать его
-          политическим Мессией.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2020-10-22 Ин 6_15</div>
-        <div class="audio">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-10-22.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Иисус отвергает попытки провозгласить его царём и говорит о хлебе
-          жизни: истинная жизнь — в причастии его плоти и крови. Многие ученики
-          уходят, не приняв этих слов, и лишь двенадцать остаются, признавая его
-          Христом.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">
-          2020-10-29 Ин 7. Иисус во время праздника Кущей
-        </div>
-        <div class="audio">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-10-29.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Лекция рассматривает события праздника Кущей в Евангелии от Иоанна:
-          Иисус открывает свою природу народу и фарисеям, вызывая споры о
-          мессианстве. Кульминацией становится сцена с женщиной, взятой в
-          прелюбодеянии, — пример учения Иисуса о прощении и внутреннем суде.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2020-11-05 Ин 8</div>
-        <div class="audio">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-11-05.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Иисус прощает женщину, пойманную в прелюбодеянии, предлагая путь к
-          самосознанию вместо осуждения: «Кто без греха, пусть первый бросит
-          камень». Лекция также затрагивает тему единства Отца и Сына и
-          универсальность библейских текстов в современном контексте.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2020-11-12 Ин 8 Праздник Кущей. Продолжение</div>
-        <div class="audio">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-11-12.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          В главах 7–8 Евангелия от Иоанна Иисус открывает свою божественную
-          природу во время праздника, провозглашая себя светом мира и
-          единственным путём к вечной жизни. Истинная свобода приходит через
-          познание истины, а не через соблюдение закона.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2020-11-19 Ин 9. Неделя о Слепом, часть 1</div>
-        <div class="audio">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-11-19.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          В девятой главе Иисус исцеляет слепого от рождения, поясняя, что это
-          не наказание за грех, но явление дел Божьих. Реакция фарисеев и
-          родителей на чудо раскрывает тему человеческого достоинства и
-          способности или неспособности принять истину.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">
-          2020-12-03 Ин 9 глава. Неделя о Слепом, часть 2
-        </div>
-        <div class="audio">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-12-03.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Имя Бога «Я есмь», открытое Моисею, Иисус усваивает себе: исцеление
-          слепого — знак его мессианской миссии и духовного прозрения. Истинная
-          вера требует личного признания Иисуса Сыном Божиим — недостаточно лишь
-          внешних свидетельств.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2020-12-10 Ин 10</div>
-        <div class="audio">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-12-10.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          В десятой главе Иисус говорит о себе как о добром пастыре и двери для
-          овец, подчёркивая, что пришёл дать жизнь с избытком. Лекция связывает
-          этот образ с ветхозаветными пророчествами о пастыре Израиля и с
-          обновлением храма, символизируемым праздником Хануки.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2020-12-17 Ин 11. Воскрешение Лазаря</div>
-        <div class="audio">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-12-17.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Воскрешение Лазаря — переломный момент перед Страстями: Иисус
-          намеренно медлит, чтобы через чудо явить Славу Божью. Слова Каяфы о
-          том, что лучше одному умереть за народ, — непреднамеренное пророчество
-          о жертве Христа.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2021-01-07 Ин 11_49 После воскрешения Лазаря</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-01-07.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Воскрешение Лазаря становится непосредственной причиной решения
-          синедриона убить Иисуса. Вход Господень в Иерусалим на осле —
-          мессианский символ без политических претензий, исполнение
-          ветхозаветных пророчеств.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2021-01-14 Ин глава 12, заключительная</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-01-14.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Двенадцатая глава — прощальное обращение Иисуса к народу: многие
-          начальники уверовали в него, но боялись быть отлучёнными от синагоги.
-          Пророчества Исаии о слепоте народа исполняются, однако Иисус
-          подчёркивает: он пришёл не судить мир, а спасти его.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2021-01-21 Ин глава 13</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-01-21.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Тринадцатая глава начинается с умывания ног — символа служения и
-          смирения — и установления новой заповеди: «Любите друг друга, как Я
-          возлюбил вас». Иисус предсказывает предательство Иуды, предвосхищая
-          начало Страстей.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">
-          2021-01-28 Ин глава 14. Обсуждение слов Петру. ＂Господь читает
-          сердца＂
-        </div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-01-28.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Лекция рассматривает традицию омовения ног в церкви как образ служения
-          и очищения, подготавливающего верующих к евхаристии. Обсуждаются
-          свобода воли, предопределение и смысл истинной любви в христианском
-          понимании.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2021-02-04 Ин 17 Первосвященническая молитва</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-02-04.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          В прощальной беседе Иисус призывает учеников не бояться, открывая себя
-          как путь, истину и жизнь: «Никто не приходит к Отцу, как только через
-          Меня». Лекция раскрывает богословие Троицы и единство всех трёх Лиц
-          как неизменную основу веры.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2021-02-11 Последняя беседа с учениками</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-02-11.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Иисус говорит ученикам: «Видевший Меня видел Отца», — утверждая своё
-          единство с трансцендентным Богом, что вызывает у учеников искреннее
-          недоумение. Соблюдение его заповедей — условие пребывания в общении с
-          Ним и Отцом; Дух Святой невидимо присутствует среди верующих.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2021-02-18 От Иоанна. Последняя беседа</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-02-18.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          В четырнадцатой главе Иисус обещает послать Утешителя — Духа Истины —
-          и утверждает: Он и Отец едины. Образ виноградной лозы раскрывает
-          единство верующих со Христом и Отцом, уходящее корнями в еврейскую
-          традицию Пасхи.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2021-02-25 Ин глава 15</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-02-25.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          В пятнадцатой главе Иисус обещает Утешителя — Святого Духа, который
-          напомнит ученикам его слова. Истинная жизнь и познание Бога возможны
-          через личные отношения с Ним, а не только через интеллектуальное
-          понимание.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2021-03-04 Агапа</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-03-04.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Лекция посвящена любви-агапе как особому Божественному дару, отличному
-          от романтической любви, и её связи с соблюдением заповедей. Недостаток
-          этой любви стал одной из причин исторических разделений в
-          христианстве, а подлинная дружба и единство между учениками остаются
-          идеалом.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2021-03-11 Иоанн. Конец главы 15</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-03-11.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Иисус обещает Духа Истины, который будет свидетельствовать о Нём и
-          обличать мир в грехе — то есть в неверии. Несмотря на печаль разлуки,
-          радость учеников восстановится через встречу с воскресшим Господом.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2021-03-18 Ин, глава 14</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-03-18.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          В прощальной беседе Иисус обещает Утешителя — Святого Духа — и
-          призывает учеников не бояться, открывая себя как единственный путь к
-          Отцу. Темы любви, исполнения заповедей и грядущей радости после
-          воскресения пронизывают всю речь.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">
-          2021-04-08 Первосвященническая молитва Иисуса
-        </div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-04-08.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          В первосвященнической молитве Иисус молится не за весь мир, но за
-          избранных учеников — прося о защите их от зла и о единстве между ними.
-          Истинная радость и полнота жизни возможны лишь через единство с Богом.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2021-04-15 Иоанн. Конец главы 17. О единстве</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-04-15.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Молитва Иисуса о единстве верующих «как Я и Отец едины» — основа
-          экуменической темы лекции. Разделение христиан на деноминации ставит
-          вопрос о реальности этого единства, хотя каждый верующий имеет доступ
-          к Богу через Христа.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">
-          2022-01-06 Послание к Евреям 9_23. Всесовершенная жертва
-        </div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-01-06.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Евр. 9 утверждает: без пролития крови нет прощения — и Христос пришёл
-          как единственная и окончательная жертва за грехи всего человечества.
-          Лекция разбирает богословие первородного греха и образ Христа как
-          света, освещающего тьму человеческой души.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2022-01-13 Seminar (Russian)</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-01-13.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Жертва Христа, описанная в Послании к Евреям, навсегда заменяет
-          ветхозаветные жертвы и является основой евхаристии. Лекция сравнивает
-          православную и протестантскую интерпретации жертвоприношения и
-          рассматривает символику хлеба и вина в литургии.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2022-01-27 Послание к Евреям 10_19-39</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-01-27.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Евр. 10:19–25 призывает входить в святилище с дерзновением через кровь
-          Христа — с искренним сердцем и твёрдой верой. Лектор подчёркивает
-          преемственность иудаизма и христианства и призывает не оставлять
-          упования, за которым следует великое воздаяние.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2022-02-03 Евр 11_1-7</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-02-03.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Одиннадцатая глава Послания к Евреям раскрывает веру как «уверенность
-          в невидимом», приводя примеры Авеля, Еноха, Авраама и Моисея. Без веры
-          невозможно угодить Богу — она лежит в основе всей истории спасения.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">
-          2022-02-05 Откровение Иоанна Богослова. Ин：1 (Семинар ведет Алексей
-          Сомов)
-        </div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-02-05.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Апокалипсис — откровение, данное Богом Иисусу для его общины в период
-          гонений; книга предназначена для литургического чтения и требует
-          понимания символического языка. Ключевые темы: Иисус как Свидетель и
-          Владыка, покаяние и прощение грехов.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">
-          2022-02-17 Евр, 11_29-40. Книга Судей, главы 4, 6, 7
-        </div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-02-17.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Евр. 11 называет героев веры — Гедеона, Самсона и других — которые
-          действовали по вере, но не получили обещанного при жизни.
-          Ветхозаветные обетования исполняются в Новом Завете через Христа: все
-          святые прошлого ожидают завершения вместе с верующими.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2022-03-03 Seminar (Russian)</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-03-03.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          На примере Гедеона и Самсона лекция показывает, что вера в Послании к
-          Евреям не предполагает безупречного характера — Бог призывает обычных
-          людей в трудные времена. История Израиля раскрывает закономерность:
-          отступление от Бога порождало нужду в новых лидерах.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2022-03-17 Послание к Евреям. Книга Судей</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-03-17.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Лекция рассматривает веру через призму Послания к Евреям и Книги
-          Судей: Гедеон, Самсон и Давид, несмотря на недостатки, являются
-          образцами веры. Вера — уверенность в невидимом, и испытания,
-          посылаемые Богом, лишь укрепляют её.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">
-          2022-03-24 Послание к Евреям, глава 12, продолжение.
-        </div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-03-24.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          В Евр. 12 сравниваются Ветхий и Новый заветы: страх перед Богом на
-          Синае уступает месту жертве Христа — непоколебимой основе спасения.
-          Лектор призывает принять «позор» Креста как неотъемлемую часть
-          следования за Христом.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2022-03-31 Послание к Евреям. Заключение</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-03-31.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Заключение Послания к Евреям подводит итог теме первосвященства Христа
-          и крови Нового Завета, призывая верующих молиться и поддерживать
-          общину. Лектор подчёркивает единство Ветхого и Нового заветов и
-          важность верности Христу для иудео-христианской общины.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2022-04-07 Семинар Евр 12</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-04-07.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Отец Сергий Булгаков выделяет евхаристию как главное таинство,
-          формирующее Церковь как тело Христово, и разграничивает новозаветное
-          священство по чину Мелхиседека и ветхозаветное по чину Аарона. Христос
-          — вечный первосвященник, и истинная власть и благодать принадлежат
-          Ему, а не церковной иерархии.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2022-04-14 Апокалипсис</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-04-14.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Лекция анализирует Апокалипсис Иоанна в контексте иудейской и
-          христианской апокалиптической традиции, опираясь на строгий подход
-          профессора Чарльза Гиблина. Символы книги необходимо читать в рамках
-          библейской традиции, понимая исторический и культурный контекст их
-          написания.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">
-          2022-05-12 Традиция апокалипсисов. Книга Пророка Даниила
-        </div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-05-12.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Книга Даниила — часть апокалиптической традиции, и её образы (звери,
-          царства) следует читать символически, а не буквально. Лектор
-          показывает, как еврейский народ в плену сохранял веру и идентичность,
-          а Бог неизменно вмешивается в ход истории.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2022-05-19 Книга пророка Даниила</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-05-19.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Книга Даниила была написана в период гонений на евреев и укрепляла их
-          религиозную идентичность; само имя «Даниил» означает «судья Божий».
-          Лектор показывает, как текст соединяет историческое и аллегорическое,
-          отражая борьбу народа Бога с имперскими силами.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">
-          2022-05-26 Апокалипсис. Обращение к семи церквам
-        </div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-05-26.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Послания к семи церквам в Малой Азии рассматриваются в их историческом
-          и символическом контексте: образы «Сына Человеческого» и «Ветхого
-          Днями» уходят корнями в Ветхий Завет. Правильное толкование требует
-          понимания интертекстуальных связей и исторического контекста тем
-          любви, терпения и испытаний.
-        </div>
-      </div>
-      <br />
-      <div class="item">
-        <div class="filename">2022-06-02 ＂Первый и последний＂</div>
-        <div class="audio" style="text-align: left; margin: 6px 0">
-          <audio controls>
-            <source
-              src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-06-02.m4a"
-              type="audio/mp4"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="summary">
-          Лекция раскрывает парадокс линейного и цикличного времени: вечные
-          события — Рождество и Воскресение — не вмещаются в хронологию и
-          повторяются в истории. Это понимание открывает ключ к апокалиптическим
-          текстам и теме верности в условиях гонений.
-        </div>
-      </div>
+      <details class="part">
+        <summary class="part-title">Евангелие от Иоанна</summary>
+        <div class="part-body">
+          <div class="item">
+            <div class="filename">2020-06-04 Mt 10</div>
+            <div class="audio">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-06-04.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              Иисус отвечает фарисеям, искушающим его вопросом о разводе: брак —
+              союз, установленный Богом, который не следует разрывать; Моисей
+              разрешил развод лишь из-за жестокосердия людей. Затем Иисус
+              благословляет детей, подчёркивая их особое место в Царстве Божьем.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">2020-10-08 Ин 5</div>
+            <div class="audio">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-10-08.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              Иисус исцеляет парализованного у купальни в субботу, что вызывает
+              преследование со стороны иудеев. Этот эпизод раскрывает суть
+              конфликта Иисуса с религиозными властями и его свидетельство о
+              собственной божественной миссии.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">2020-10-15 Ин 6. О вечной жизни</div>
+            <div class="audio">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-10-15.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              В Ин. 5–6 Иисус открывает себя как источник воскресения и вечной
+              жизни, а чудо насыщения пяти тысяч предвосхищает евхаристию. Он
+              называет себя хлебом жизни и отвергает попытки сделать его
+              политическим Мессией.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">2020-10-22 Ин 6_15</div>
+            <div class="audio">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-10-22.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              Иисус отвергает попытки провозгласить его царём и говорит о хлебе
+              жизни: истинная жизнь — в причастии его плоти и крови. Многие
+              ученики уходят, не приняв этих слов, и лишь двенадцать остаются,
+              признавая его Христом.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">
+              2020-10-29 Ин 7. Иисус во время праздника Кущей
+            </div>
+            <div class="audio">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-10-29.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              Лекция рассматривает события праздника Кущей в Евангелии от
+              Иоанна: Иисус открывает свою природу народу и фарисеям, вызывая
+              споры о мессианстве. Кульминацией становится сцена с женщиной,
+              взятой в прелюбодеянии, — пример учения Иисуса о прощении и
+              внутреннем суде.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">2020-11-05 Ин 8</div>
+            <div class="audio">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-11-05.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              Иисус прощает женщину, пойманную в прелюбодеянии, предлагая путь к
+              самосознанию вместо осуждения: «Кто без греха, пусть первый бросит
+              камень». Лекция также затрагивает тему единства Отца и Сына и
+              универсальность библейских текстов в современном контексте.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">
+              2020-11-12 Ин 8 Праздник Кущей. Продолжение
+            </div>
+            <div class="audio">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-11-12.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              В главах 7–8 Евангелия от Иоанна Иисус открывает свою божественную
+              природу во время праздника, провозглашая себя светом мира и
+              единственным путём к вечной жизни. Истинная свобода приходит через
+              познание истины, а не через соблюдение закона.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">
+              2020-11-19 Ин 9. Неделя о Слепом, часть 1
+            </div>
+            <div class="audio">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-11-19.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              В девятой главе Иисус исцеляет слепого от рождения, поясняя, что
+              это не наказание за грех, но явление дел Божьих. Реакция фарисеев
+              и родителей на чудо раскрывает тему человеческого достоинства и
+              способности или неспособности принять истину.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">
+              2020-12-03 Ин 9 глава. Неделя о Слепом, часть 2
+            </div>
+            <div class="audio">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-12-03.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              Имя Бога «Я есмь», открытое Моисею, Иисус усваивает себе:
+              исцеление слепого — знак его мессианской миссии и духовного
+              прозрения. Истинная вера требует личного признания Иисуса Сыном
+              Божиим — недостаточно лишь внешних свидетельств.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">2020-12-10 Ин 10</div>
+            <div class="audio">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-12-10.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              В десятой главе Иисус говорит о себе как о добром пастыре и двери
+              для овец, подчёркивая, что пришёл дать жизнь с избытком. Лекция
+              связывает этот образ с ветхозаветными пророчествами о пастыре
+              Израиля и с обновлением храма, символизируемым праздником Хануки.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">2020-12-17 Ин 11. Воскрешение Лазаря</div>
+            <div class="audio">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2020-12-17.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              Воскрешение Лазаря — переломный момент перед Страстями: Иисус
+              намеренно медлит, чтобы через чудо явить Славу Божью. Слова Каяфы
+              о том, что лучше одному умереть за народ, — непреднамеренное
+              пророчество о жертве Христа.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">
+              2021-01-07 Ин 11_49 После воскрешения Лазаря
+            </div>
+            <div class="audio" style="text-align: left; margin: 6px 0">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-01-07.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              Воскрешение Лазаря становится непосредственной причиной решения
+              синедриона убить Иисуса. Вход Господень в Иерусалим на осле —
+              мессианский символ без политических претензий, исполнение
+              ветхозаветных пророчеств.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">2021-01-14 Ин глава 12, заключительная</div>
+            <div class="audio" style="text-align: left; margin: 6px 0">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-01-14.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              Двенадцатая глава — прощальное обращение Иисуса к народу: многие
+              начальники уверовали в него, но боялись быть отлучёнными от
+              синагоги. Пророчества Исаии о слепоте народа исполняются, однако
+              Иисус подчёркивает: он пришёл не судить мир, а спасти его.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">2021-01-21 Ин глава 13</div>
+            <div class="audio" style="text-align: left; margin: 6px 0">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-01-21.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              Тринадцатая глава начинается с умывания ног — символа служения и
+              смирения — и установления новой заповеди: «Любите друг друга, как
+              Я возлюбил вас». Иисус предсказывает предательство Иуды,
+              предвосхищая начало Страстей.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">
+              2021-01-28 Ин глава 14. Обсуждение слов Петру. ＂Господь читает
+              сердца＂
+            </div>
+            <div class="audio" style="text-align: left; margin: 6px 0">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-01-28.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              Лекция рассматривает традицию омовения ног в церкви как образ
+              служения и очищения, подготавливающего верующих к евхаристии.
+              Обсуждаются свобода воли, предопределение и смысл истинной любви в
+              христианском понимании.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">
+              2021-02-04 Ин 17 Первосвященническая молитва
+            </div>
+            <div class="audio" style="text-align: left; margin: 6px 0">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-02-04.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              В прощальной беседе Иисус призывает учеников не бояться, открывая
+              себя как путь, истину и жизнь: «Никто не приходит к Отцу, как
+              только через Меня». Лекция раскрывает богословие Троицы и единство
+              всех трёх Лиц как неизменную основу веры.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">2021-02-11 Последняя беседа с учениками</div>
+            <div class="audio" style="text-align: left; margin: 6px 0">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-02-11.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              Иисус говорит ученикам: «Видевший Меня видел Отца», — утверждая
+              своё единство с трансцендентным Богом, что вызывает у учеников
+              искреннее недоумение. Соблюдение его заповедей — условие
+              пребывания в общении с Ним и Отцом; Дух Святой невидимо
+              присутствует среди верующих.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">2021-02-18 От Иоанна. Последняя беседа</div>
+            <div class="audio" style="text-align: left; margin: 6px 0">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-02-18.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              В четырнадцатой главе Иисус обещает послать Утешителя — Духа
+              Истины — и утверждает: Он и Отец едины. Образ виноградной лозы
+              раскрывает единство верующих со Христом и Отцом, уходящее корнями
+              в еврейскую традицию Пасхи.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">2021-02-25 Ин глава 15</div>
+            <div class="audio" style="text-align: left; margin: 6px 0">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-02-25.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              В пятнадцатой главе Иисус обещает Утешителя — Святого Духа,
+              который напомнит ученикам его слова. Истинная жизнь и познание
+              Бога возможны через личные отношения с Ним, а не только через
+              интеллектуальное понимание.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">2021-03-04 Агапа</div>
+            <div class="audio" style="text-align: left; margin: 6px 0">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-03-04.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              Лекция посвящена любви-агапе как особому Божественному дару,
+              отличному от романтической любви, и её связи с соблюдением
+              заповедей. Недостаток этой любви стал одной из причин исторических
+              разделений в христианстве, а подлинная дружба и единство между
+              учениками остаются идеалом.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">2021-03-11 Иоанн. Конец главы 15</div>
+            <div class="audio" style="text-align: left; margin: 6px 0">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-03-11.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              Иисус обещает Духа Истины, который будет свидетельствовать о Нём и
+              обличать мир в грехе — то есть в неверии. Несмотря на печаль
+              разлуки, радость учеников восстановится через встречу с воскресшим
+              Господом.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">2021-03-18 Ин, глава 14</div>
+            <div class="audio" style="text-align: left; margin: 6px 0">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-03-18.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              В прощальной беседе Иисус обещает Утешителя — Святого Духа — и
+              призывает учеников не бояться, открывая себя как единственный путь
+              к Отцу. Темы любви, исполнения заповедей и грядущей радости после
+              воскресения пронизывают всю речь.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">
+              2021-04-08 Первосвященническая молитва Иисуса
+            </div>
+            <div class="audio" style="text-align: left; margin: 6px 0">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-04-08.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              В первосвященнической молитве Иисус молится не за весь мир, но за
+              избранных учеников — прося о защите их от зла и о единстве между
+              ними. Истинная радость и полнота жизни возможны лишь через
+              единство с Богом.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">
+              2021-04-15 Иоанн. Конец главы 17. О единстве
+            </div>
+            <div class="audio" style="text-align: left; margin: 6px 0">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2021-04-15.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              Молитва Иисуса о единстве верующих «как Я и Отец едины» — основа
+              экуменической темы лекции. Разделение христиан на деноминации
+              ставит вопрос о реальности этого единства, хотя каждый верующий
+              имеет доступ к Богу через Христа.
+            </div>
+          </div>
+          <br />
+        </div>
+      </details>      
+      <details class="part">
+        <summary class="part-title">Послание к Евреям</summary>
+        <div class="part-body">
+          <div class="item">
+            <div class="filename">
+              2022-01-06 Послание к Евреям 9_23. Всесовершенная жертва
+            </div>
+            <div class="audio" style="text-align: left; margin: 6px 0">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-01-06.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              Евр. 9 утверждает: без пролития крови нет прощения — и Христос
+              пришёл как единственная и окончательная жертва за грехи всего
+              человечества. Лекция разбирает богословие первородного греха и
+              образ Христа как света, освещающего тьму человеческой души.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">2022-01-13 Seminar (Russian)</div>
+            <div class="audio" style="text-align: left; margin: 6px 0">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-01-13.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              Жертва Христа, описанная в Послании к Евреям, навсегда заменяет
+              ветхозаветные жертвы и является основой евхаристии. Лекция
+              сравнивает православную и протестантскую интерпретации
+              жертвоприношения и рассматривает символику хлеба и вина в
+              литургии.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">2022-01-27 Послание к Евреям 10_19-39</div>
+            <div class="audio" style="text-align: left; margin: 6px 0">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-01-27.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              Евр. 10:19–25 призывает входить в святилище с дерзновением через
+              кровь Христа — с искренним сердцем и твёрдой верой. Лектор
+              подчёркивает преемственность иудаизма и христианства и призывает
+              не оставлять упования, за которым следует великое воздаяние.
+            </div>
+          </div>
+          <br />
+          <div class="item">
+            <div class="filename">2022-02-03 Евр 11_1-7</div>
+            <div class="audio" style="text-align: left; margin: 6px 0">
+              <audio controls="">
+                <source
+                  src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-02-03.m4a"
+                  type="audio/mp4"
+                />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="summary">
+              Одиннадцатая глава Послания к Евреям раскрывает веру как
+              «уверенность в невидимом», приводя примеры Авеля, Еноха, Авраама и
+              Моисея. Без веры невозможно угодить Богу — она лежит в основе всей
+              истории спасения.
+            </div>
+          </div>
+          <br />
+              <div class="item">
+                <div class="filename">
+                  2022-02-17 Евр, 11_29-40. Книга Судей, главы 4, 6, 7
+                </div>
+                <div class="audio" style="text-align: left; margin: 6px 0">
+                  <audio controls="">
+                    <source
+                      src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-02-17.m4a"
+                      type="audio/mp4"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+                <div class="summary">
+                  Евр. 11 называет героев веры — Гедеона, Самсона и других —
+                  которые действовали по вере, но не получили обещанного при
+                  жизни. Ветхозаветные обетования исполняются в Новом Завете
+                  через Христа: все святые прошлого ожидают завершения вместе с
+                  верующими.
+                </div>
+              </div>
+              <br />
+              <div class="item">
+                <div class="filename">2022-03-03 Seminar (Russian)</div>
+                <div class="audio" style="text-align: left; margin: 6px 0">
+                  <audio controls="">
+                    <source
+                      src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-03-03.m4a"
+                      type="audio/mp4"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+                <div class="summary">
+                  На примере Гедеона и Самсона лекция показывает, что вера в
+                  Послании к Евреям не предполагает безупречного характера — Бог
+                  призывает обычных людей в трудные времена. История Израиля
+                  раскрывает закономерность: отступление от Бога порождало нужду
+                  в новых лидерах.
+                </div>
+              </div>
+              <br />
+              <div class="item">
+                <div class="filename">
+                  2022-03-17 Послание к Евреям. Книга Судей
+                </div>
+                <div class="audio" style="text-align: left; margin: 6px 0">
+                  <audio controls="">
+                    <source
+                      src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-03-17.m4a"
+                      type="audio/mp4"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+                <div class="summary">
+                  Лекция рассматривает веру через призму Послания к Евреям и
+                  Книги Судей: Гедеон, Самсон и Давид, несмотря на недостатки,
+                  являются образцами веры. Вера — уверенность в невидимом, и
+                  испытания, посылаемые Богом, лишь укрепляют её.
+                </div>
+              </div>
+              <br />
+              <div class="item">
+                <div class="filename">
+                  2022-03-24 Послание к Евреям, глава 12, продолжение.
+                </div>
+                <div class="audio" style="text-align: left; margin: 6px 0">
+                  <audio controls="">
+                    <source
+                      src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-03-24.m4a"
+                      type="audio/mp4"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+                <div class="summary">
+                  В Евр. 12 сравниваются Ветхий и Новый заветы: страх перед
+                  Богом на Синае уступает месту жертве Христа — непоколебимой
+                  основе спасения. Лектор призывает принять «позор» Креста как
+                  неотъемлемую часть следования за Христом.
+                </div>
+              </div>
+              <br />
+              <div class="item">
+                <div class="filename">
+                  2022-03-31 Послание к Евреям. Заключение
+                </div>
+                <div class="audio" style="text-align: left; margin: 6px 0">
+                  <audio controls="">
+                    <source
+                      src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-03-31.m4a"
+                      type="audio/mp4"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+                <div class="summary">
+                  Заключение Послания к Евреям подводит итог теме
+                  первосвященства Христа и крови Нового Завета, призывая
+                  верующих молиться и поддерживать общину. Лектор подчёркивает
+                  единство Ветхого и Нового заветов и важность верности Христу
+                  для иудео-христианской общины.
+                </div>
+              </div>
+              <br />
+              <div class="item">
+                <div class="filename">2022-04-07 Семинар Евр 12</div>
+                <div class="audio" style="text-align: left; margin: 6px 0">
+                  <audio controls="">
+                    <source
+                      src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-04-07.m4a"
+                      type="audio/mp4"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+                <div class="summary">
+                  Отец Сергий Булгаков выделяет евхаристию как главное таинство,
+                  формирующее Церковь как тело Христово, и разграничивает
+                  новозаветное священство по чину Мелхиседека и ветхозаветное по
+                  чину Аарона. Христос — вечный первосвященник, и истинная
+                  власть и благодать принадлежат Ему, а не церковной иерархии.
+                </div>
+              </div>
+              <br />
+            </div>
+          </details>
+          <details class="part">
+            <summary class="part-title">Апокалипсис и Книга пророка Даниила</summary>
+            <div class="part-body">                          
+              <div class="item">
+                <div class="filename">
+                  2022-02-05 Откровение Иоанна Богослова. Ин：1 (Семинар ведет
+                  Алексей Сомов)
+                </div>
+                <div class="audio" style="text-align: left; margin: 6px 0">
+                  <audio controls="">
+                    <source
+                      src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-02-05.m4a"
+                      type="audio/mp4"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+                <div class="summary">
+                  Апокалипсис — откровение, данное Богом Иисусу для его общины в
+                  период гонений; книга предназначена для литургического чтения
+                  и требует понимания символического языка. Ключевые темы: Иисус
+                  как Свидетель и Владыка, покаяние и прощение грехов.
+                </div>
+              </div>
+              <br/>
+              <div class="item">
+                <div class="filename">2022-05-19 Книга пророка Даниила</div>
+                <div class="audio" style="text-align: left; margin: 6px 0">
+                  <audio controls="">
+                    <source
+                      src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-05-19.m4a"
+                      type="audio/mp4"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+                <div class="summary">
+                  Книга Даниила была написана в период гонений на евреев и
+                  укрепляла их религиозную идентичность; само имя «Даниил»
+                  означает «судья Божий». Лектор показывает, как текст соединяет
+                  историческое и аллегорическое, отражая борьбу народа Бога с
+                  имперскими силами.
+                </div>
+              </div>
+              <br />
+              <div class="item">
+                <div class="filename">
+                  2022-05-26 Апокалипсис. Обращение к семи церквам
+                </div>
+                <div class="audio" style="text-align: left; margin: 6px 0">
+                  <audio controls="">
+                    <source
+                      src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-05-26.m4a"
+                      type="audio/mp4"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+                <div class="summary">
+                  Послания к семи церквам в Малой Азии рассматриваются в их
+                  историческом и символическом контексте: образы «Сына
+                  Человеческого» и «Ветхого Днями» уходят корнями в Ветхий
+                  Завет. Правильное толкование требует понимания
+                  интертекстуальных связей и исторического контекста тем любви,
+                  терпения и испытаний.
+                </div>
+              </div>
+              <br />
+              <div class="item">
+                <div class="filename">2022-06-02 ＂Первый и последний＂</div>
+                <div class="audio" style="text-align: left; margin: 6px 0">
+                  <audio controls="">
+                    <source
+                      src="https://pub-fc3744ac36b04e97aec0ec0d82954e2f.r2.dev/audio_m4a/2022-06-02.m4a"
+                      type="audio/mp4"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+                <div class="summary">
+                  Лекция раскрывает парадокс линейного и цикличного времени:
+                  вечные события — Рождество и Воскресение — не вмещаются в
+                  хронологию и повторяются в истории. Это понимание открывает
+                  ключ к апокалиптическим текстам и теме верности в условиях
+                  гонений.
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </details>
+      <footer>
+        © Church of Christ the Savior, New York —
+        <a href="https://christthesaviornyc.org" style="color: #aaa"
+          >christthesaviornyc.org</a
+        >
+      </footer>
     </div>
-    <footer>
-      &copy; Church of Christ the Savior, New York &mdash;
-      <a href="https://christthesaviornyc.org" style="color: #aaa"
-        >christthesaviornyc.org</a
-      >
-    </footer>
   </body>
 </html>
